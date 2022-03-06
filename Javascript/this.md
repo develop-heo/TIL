@@ -1,6 +1,7 @@
 # this란?
 
-Javascript 에서 함수의 this는 다른 언어와는 다르게 동작한다. (다른 대부분의 객체지향 언어에서 this == 클래스로 생성한 인스턴스 객체)
+Javascript 에서 함수의 this는 다른 언어와는 다르게 동작한다. (다른 대부분의 객체지향 언어에서 this == 클래스로 생성한 인스턴스 객체, 클래스에서만 사용가능)
+Javascript에서 this는 어디서든 사용할 수 있고, 함수와 객체(메서드)의 구분이 느슨한 js에서 this는 이 둘을 구분하는 유일한 기능이다.
 또한 strict mode와 strict mode 가 아닐 때에도 일부 차이가 있다.
 
 ### Strict Mode?
