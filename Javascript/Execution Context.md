@@ -9,9 +9,9 @@ Javascript 엔진이 코드를 읽고 **실행에 필요한 정보를 모아놓�
 
 실행컨텍스트의 종류는
 
-1. <b>Gloabl - 전역 (GEC)</b> </br>
+1. <b>Gloabl - 전역 공간 (GEC, Global Execution Context)</b> </br>
    전역 공간. this, 객체 바인딩, 변수 선언
-2. <b>Function - 함수 (FEC)</b> </br>
+2. <b>Function - 함수 공간 (FEC, Function Execution Context)</b> </br>
    상위 컨텍스트, this, 매개변수, arg..
 3. Eval - eval 메서드
 
