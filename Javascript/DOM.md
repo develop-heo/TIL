@@ -15,6 +15,8 @@ DOM은 문서의 구조화된 표현(structured representation)을 제공하며
 
 **DOM은 HTML 문서를 Javascript로 모델링한 것이며, DOM interface의 가장 작은 단위는 Node이고 Node는 Tree 구조로 구성됨**
 
+<hr>
+
 ## DOM 속성
 
 ```
@@ -25,15 +27,22 @@ document.querySelector('html 태그');
 해당 DOM 객체 내부에는 아래와 같이 수많은 DOM 속성들이 존재한다.
 <img src="../Imgs/DOM_attribute.png" />
 
+<hr>
+
 ## DOM 선택
 
 - Document.getElementById() : id로 가져옴
 - Element.getElementsByClassName() : 클래스명으로 가져옴
 - Document.getElementsByTagName() : 태그로 가져옴
 
+==> 위 세가지를 동시에 사용할 수 있는
+
 - Document.querySelector()
 - Documnet.querySelectorAll()
+  <br>
   => id, class, tag 모두 가져올 수 있음
+
+<hr>
 
 ## DOM 조작
 
@@ -42,22 +51,23 @@ DOM을 조작하는 방법은 매우 많은데 아래와 같은 예시처럼 사
 ```
 클래스 name 추가하고 조작하기
 const btn = document.querySelector(element);
-btn.classList.add('new-class');
-btn.ClassList.remove('new-class');
-btn.classList.contains('new-class');
+btn.classList.add('new-class'); //'new-class' 추가
+btn.ClassList.remove('new-class'); //'new-class' 지우기
+btn.classList.contains('new-class'); //'new-class'를 포함하고 있는지 확인
 
 텍스트 변경하기
 const txt = document.querySelector(element);
 txt.textContent
 txt.textContent = 'new text';
 
-DOM 노트 쓰고 지우기
+DOM 노드 추가 및 지우기
 const box = document.querySelector(element);
-const target = document.querySelector(element);
-box.removeChild(target);
-const el = document.createElement(element);
-el.textContent = 'NEW';
-box.appendChild(el);
+const el = document.querySelector(element);
+box.removeChild(el);
+const el2 = document.createElement(element);
+el2.textContent = 'NEW';
+box.appendChild(el2);
 
+DOM 내부 HTML 통째로 변경하기
 box.innerHTML = '<h1 class="element">some text</h1>';
 ```
