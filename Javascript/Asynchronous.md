@@ -1,10 +1,21 @@
 # 동기와 비동기 (Synchronous & Asynchronous)
 
+스레드 : 프로그램의 실행 단위 </br>
+자바스크립트는 싱글스레드 언어이기 한번에 하나의 작업만 가능하다. 
+그렇기 때문에 비동기 적으로 실행되는 작업 (ex.버튼클릭) 실행 시 순서대로 실행되는 동기처럼 맞춰주기 위헤서는 비동기 개념을 알아야한다! </br>
 <img src="../imgs/async.png" width="500px"  />
 
-스레드 : 프로그램의 실행 단위
-자바스크립트는 싱글스레드 언어이기 때문에 비동기 개념을 알아야한다!
 
+아래는 일반적인 순차적으로 실행되는 동기 코드이다.
+```
+console.log(1);
+console.log(2);
+console.log(3);
+console.log(4);
+console.log(5);
+
+```
+아래는 비동기에 해당하는 코드이다.
 ```
 const btn = document.querySelector('button');
 
